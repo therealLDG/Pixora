@@ -1,0 +1,114 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navbarContainer {
+  width: 100%;
+  height: 4.5rem;
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  background-color: #252b30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarContainer .options {
+  display: flex;
+  gap: 2rem;
+  color: #bcc1c3;
+  align-items: center;
+}
+
+.navbarContainer .options button {
+  background-color: #e9506d;
+  padding: 3rem;
+}
+
+/* 1. Set up the main container */
+.home-hero-container {
+  position: relative; /* This is the new positioning 'home base' */
+  width: 100%;
+}
+
+/* 2. Style the image container and the image itself */
+.home-hero-image {
+  /* This container just holds the image */
+  width: 100%;
+  height: auto; /* Or whatever height you want */
+}
+
+.home-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Removes any bottom space */
+}
+
+/* 3. Position the content over the image */
+.home-hero-content {
+  position: absolute; /* Lifts the content to be placed on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Styling for the text */
+  color: white; /* Make sure text is visible on the image */
+  text-align: center;
+  z-index: 2; /* Ensures it's on a higher layer than the image */
+}
+
+
+/* Optional: Style the H1 inside for better looks */
+.home-hero-content h1 {
+  margin: 0; /* Remove default margin from h1 */
+  font-size: 1.3rem; /* Example font size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow for readability */
+}
+
+.hero-home-input {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-home-input input {
+  padding: 0.6rem;
+  width: 70%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+}
+
+.hero-home-input input::placeholder {
+  color: #bcc1c3;
+  font-weight: 600;
+}
+
+.hero-home-input button {
+  width: auto;
+  padding: 1rem;
+}
+
+
+.image-backdrop{
+  background-color: rgba(0, 0, 0,1);
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+.explore-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  background-color: #0d1012;
+  color: white;
+}
+
+.explore-heading h2{
+  color: #b9bec0;
+  font-size: 1.2rem;
+}

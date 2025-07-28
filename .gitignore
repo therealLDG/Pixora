@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js or Vite build output
+frontend/dist/
+frontend/.next/
+frontend/out/
+backend/dist/
+backend/build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Videos or large assets
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Git folders inside subfolders (if mistakenly added earlier)
+frontend/.git/
+backend/.git/
