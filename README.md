@@ -8,7 +8,7 @@ This is a full-stack project that integrates Google's **Gemini AI API** using a 
 ## 📽️ Demo Video
 
 <a href="https://youtu.be/N3_4u6MrSb0" target="_blank">
-  <img src="https://i9.ytimg.com/vi/N3_4u6MrSb0/mqdefault.jpg?sqp=CJCXm8QG&rs=AOn4CLA-p9SFf1M_ooMpHJQzdDVKKEQaKg&retry=3" alt="Demo Video" width="600">
+  <img src="https://i.ytimg.com/an_webp/N3_4u6MrSb0/mqdefault_6s.webp?du=3000&sqp=CLr9nsQG&rs=AOn4CLAvfa1GR9a4jiQjSDkrJ_m3FNvolw" alt="Demo Video" width="600">
 </a>
 
 ---
