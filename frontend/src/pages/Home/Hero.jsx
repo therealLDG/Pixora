@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PulseLoader } from "react-spinners";
 import Images from "./Images";
 
 export default function Hero() {
@@ -49,55 +50,65 @@ export default function Hero() {
   };
 
   return (
-        <>
-    <div className="home-hero-container">
-      <div className="home-hero-image">
-        <div className="image-backdrop">
-          {/* This img src is now controlled by React state */}
-          <img src="/images/cozy cat.jpeg" alt={prompt || "AI generated art"} />
+    <>
+      <div className="home-hero-container">
+        <div className="home-hero-image">
+          <div className="image-backdrop">
+            {/* This img src is now controlled by React state */}
+            <img
+              src="/images/cozy cat.jpeg"
+              alt={prompt || "AI generated art"}
+            />
+          </div>
+        </div>
+
+        <div className="home-hero-content">
+          <h1>AI Art Generator:</h1>
+          <p style={{ fontSize: "2.5rem", fontWeight: "500" }}>
+            All the best AI Art models in one place
+          </p>
+          <p style={{ fontWeight: "500" }}>
+            Create amazing artworks in seconds using our AI Art Generator. Use
+            Flux, DALL-e 3, Google Imagen, Stable Diffusion, Ideogram and more.
+            Try our AI art generator no
+          </p>
+
+          <div className="hero-home-input">
+            <input
+              type="text"
+              placeholder="E.g. A cat wearing sunglasses by the pool"
+              value={prompt} // Bind the input's value to state
+              onChange={(e) => setPrompt(e.target.value)} // Update state on every keystroke
+              disabled={isLoading} // Disable input while loading
+            />
+            <button
+              onClick={generateAndShowImage}
+              className="btn btn-dark"
+              style={{ backgroundColor: "#e9506d", border: "none" }}
+              disabled={isLoading}
+            >
+              {/* Show a different message while loading */}
+              {isLoading ? (
+                <PulseLoader
+                  color="#ffffff"
+                  cssOverride={{}}
+                  margin={5}
+                  size={5}
+                  speedMultiplier={2}
+                />
+              ) : (
+                <>
+                  Create <i className="fa-solid fa-arrow-right"></i>
+                </>
+              )}
+            </button>
+          </div>
+          <p style={{ color: "#bcc1c3", fontWeight: "500" }}>
+            No payment or credit card required
+          </p>
         </div>
       </div>
-
-      <div className="home-hero-content">
-        <h1>AI Art Generator:</h1>
-        <p style={{ fontSize: "2.5rem", fontWeight: "500" }}>
-          All the best AI Art models in one place
-        </p>
-        <p style={{ fontWeight: "500" }}>
-          Create amazing artworks in seconds using our AI Art Generator. Use
-          Flux, DALL-e 3, Google Imagen, Stable Diffusion, Ideogram and more.
-          Try our AI art generator no
-        </p>
-
-        <div className="hero-home-input">
-          <input
-            type="text"
-            placeholder="E.g. A cat wearing sunglasses by the pool"
-            value={prompt} // Bind the input's value to state
-            onChange={(e) => setPrompt(e.target.value)} // Update state on every keystroke
-            disabled={isLoading} // Disable input while loading
-          />
-          <button
-            onClick={generateAndShowImage}
-            className="btn btn-dark" style={{backgroundColor:"#e9506d",border:"none"}}
-            disabled={isLoading}
-          >
-            {/* Show a different message while loading */}
-            {isLoading ? (
-              "Creating..."
-            ) : (
-              <>
-                Create <i className="fa-solid fa-arrow-right"></i>
-              </>
-            )}
-          </button>
-        </div>
-        <p style={{ color: "#bcc1c3", fontWeight: "500" }}>
-          No payment or credit card required
-        </p>
-      </div>
-    </div>
-    <Images images={imageUrl} isLoading={isLoading}/>
-</>
+      <Images images={imageUrl} isLoading={isLoading} />
+    </>
   );
 }
