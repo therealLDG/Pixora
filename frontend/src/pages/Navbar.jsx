@@ -27,11 +27,11 @@ export default function Navbar() {
             className="btn mt-3"
             style={{ backgroundColor: "#e9506d", color: "#fff" }}
           >
-            Create <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Create <i className="fa-solid fa-wand-magic-sparkles"></i>
           </p>
         </Link>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-user"></i>
       </div>
     </div>
   );
